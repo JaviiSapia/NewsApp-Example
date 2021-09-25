@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="EEt-MW-9Po" customClass="NewsCell" customModule="NewsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="640" height="207"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bPi-h7-luD">
+                <rect key="frame" x="0.0" y="0.0" width="640" height="207"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izc-GJ-npW">
+                        <rect key="frame" x="5" y="5" width="630" height="197"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8V3-cb-o99">
+                                <rect key="frame" x="0.0" y="0.0" width="197" height="197"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TestImage" translatesAutoresizingMaskIntoConstraints="NO" id="X6c-yH-akf" customClass="AsyncImage" customModule="NewsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="197"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="X6c-yH-akf" firstAttribute="top" secondItem="8V3-cb-o99" secondAttribute="top" id="5b7-Nc-7hr"/>
+                                    <constraint firstAttribute="width" secondItem="8V3-cb-o99" secondAttribute="height" multiplier="1:1" id="Az5-c8-qUU"/>
+                                    <constraint firstAttribute="bottom" secondItem="X6c-yH-akf" secondAttribute="bottom" id="EFG-GH-CqW"/>
+                                    <constraint firstAttribute="trailing" secondItem="X6c-yH-akf" secondAttribute="trailing" id="SKb-0V-jUr"/>
+                                    <constraint firstItem="X6c-yH-akf" firstAttribute="leading" secondItem="8V3-cb-o99" secondAttribute="leading" id="aQZ-hE-HpY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gA8-f5-UFX" customClass="HeaderView" customModule="NewsApp" customModuleProvider="target">
+                                <rect key="frame" x="210" y="0.0" width="420" height="197"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gA8-f5-UFX" firstAttribute="leading" secondItem="8V3-cb-o99" secondAttribute="trailing" constant="13" id="EUI-2N-zZx"/>
+                            <constraint firstItem="8V3-cb-o99" firstAttribute="top" secondItem="Izc-GJ-npW" secondAttribute="top" id="VyY-0r-6nS"/>
+                            <constraint firstAttribute="trailing" secondItem="gA8-f5-UFX" secondAttribute="trailing" id="XVm-hz-yAZ"/>
+                            <constraint firstItem="gA8-f5-UFX" firstAttribute="top" secondItem="Izc-GJ-npW" secondAttribute="top" id="bXt-Cc-bSZ"/>
+                            <constraint firstAttribute="bottom" secondItem="gA8-f5-UFX" secondAttribute="bottom" id="bws-OT-KJy"/>
+                            <constraint firstItem="8V3-cb-o99" firstAttribute="leading" secondItem="Izc-GJ-npW" secondAttribute="leading" id="g5f-Oq-Q2E"/>
+                            <constraint firstAttribute="bottom" secondItem="8V3-cb-o99" secondAttribute="bottom" id="u5L-Fa-nlG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Izc-GJ-npW" secondAttribute="bottom" constant="5" id="BVo-Yp-UXE"/>
+                    <constraint firstAttribute="trailing" secondItem="Izc-GJ-npW" secondAttribute="trailing" constant="5" id="CPo-H0-gch"/>
+                    <constraint firstItem="Izc-GJ-npW" firstAttribute="leading" secondItem="bPi-h7-luD" secondAttribute="leading" constant="5" id="Z3q-Zy-Aej"/>
+                    <constraint firstItem="Izc-GJ-npW" firstAttribute="top" secondItem="bPi-h7-luD" secondAttribute="top" constant="5" id="ZLa-1t-jAy"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="640" height="207"/>
+            <connections>
+                <outlet property="container" destination="Izc-GJ-npW" id="HRJ-TN-TcU"/>
+                <outlet property="header" destination="gA8-f5-UFX" id="Iph-WM-XaC"/>
+                <outlet property="imageContainer" destination="8V3-cb-o99" id="abc-J7-tLC"/>
+                <outlet property="newsImage" destination="X6c-yH-akf" id="vOr-il-Ula"/>
+            </connections>
+            <point key="canvasLocation" x="95.652173913043484" y="-71.316964285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="TestImage" width="720.5" height="702.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

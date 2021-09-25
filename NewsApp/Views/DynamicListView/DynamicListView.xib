@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DynamicListView" customModule="NewsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="iN0-l3-epB" id="0Gf-x4-SrT"/>
+                <outlet property="scrollView" destination="qSi-j4-3qf" id="EBz-O4-ojA"/>
+                <outlet property="stackHeigth" destination="PJf-VI-x3S" id="4Vh-wv-27Y"/>
+                <outlet property="stackView" destination="xs5-89-74D" id="A4J-T3-Bbh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSi-j4-3qf">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xs5-89-74D">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xs5-89-74D" firstAttribute="leading" secondItem="qSi-j4-3qf" secondAttribute="leading" id="2xU-9f-HRP"/>
+                        <constraint firstItem="xs5-89-74D" firstAttribute="height" secondItem="qSi-j4-3qf" secondAttribute="height" id="PJf-VI-x3S"/>
+                        <constraint firstAttribute="bottom" secondItem="xs5-89-74D" secondAttribute="bottom" id="SIu-FD-H5c"/>
+                        <constraint firstAttribute="trailing" secondItem="xs5-89-74D" secondAttribute="trailing" id="UFV-Pw-Shq"/>
+                        <constraint firstItem="xs5-89-74D" firstAttribute="width" secondItem="qSi-j4-3qf" secondAttribute="width" id="fyl-PW-P32"/>
+                        <constraint firstItem="xs5-89-74D" firstAttribute="top" secondItem="qSi-j4-3qf" secondAttribute="top" id="heq-HZ-Ue9"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemIndigoColor"/>
+            <constraints>
+                <constraint firstItem="qSi-j4-3qf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7vL-NA-hus"/>
+                <constraint firstItem="qSi-j4-3qf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="QrK-of-07h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qSi-j4-3qf" secondAttribute="bottom" id="oXp-lW-kcb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qSi-j4-3qf" secondAttribute="trailing" id="zrZ-Sz-bFs"/>
+            </constraints>
+            <point key="canvasLocation" x="-58" y="51"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
